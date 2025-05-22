@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 // Route ke halaman welcome
 Route::get('/', function () {
-  return view('dashboard');
+  return redirect()->route('dashboard');
 });
 
 Route::get('/register', [AuthController::class, 'register'])->name('auth.register');
